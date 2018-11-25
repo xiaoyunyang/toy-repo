@@ -46,10 +46,21 @@ $ git commit -m 'added branch2.md'
 
 Make changes to master's README and merge the change into branch1 and branch2:
 
+Step 1: make changes to master's README
+
 ```
 $ git checkout master
 $ vim README.md
 # ...make some changes to README.md
 $ git add .
 $ git commit -m 'updated README.md'
+```
+
+Step 2: use `rebase master` to merge master into feature branch
+
+```
+$ git checkout branch1
+$ git rebase master
+$ git checkout branch2
+$ git rebase master
 ```

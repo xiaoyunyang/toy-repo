@@ -54,6 +54,7 @@ $ vim README.md
 # ...make some changes to README.md
 $ git add .
 $ git commit -m 'updated README.md'
+$ git push origin master
 ```
 
 Step 2: use `rebase master` to merge master into feature branch
@@ -61,6 +62,13 @@ Step 2: use `rebase master` to merge master into feature branch
 ```
 $ git checkout branch1
 $ git rebase master
+$ git pull origin branch1
+$ git push origin branch1
+```
+
+```
 $ git checkout branch2
 $ git rebase master
+$ git pull origin branch2
+$ git push origin branch2
 ```
